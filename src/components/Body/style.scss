@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+.Body {
+    height: calc(100% - ($header-height));
+    background-color: $body-color;
+    padding: 0 $padding-width-general;
+    padding-top: 54px;
+
+    .search {
+        justify-content: space-between;
+    }
+
+
+    .info {
+        color: white;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+
+    .Title {
+        font-weight: 600;
+        font-size: 45px;
+        color: white;
+    }
+
+    .SearchBox {
+        width: 239px;
+        height: 40px;
+        background: #FFFFFF;
+        border-radius: 62px;
+
+        .fa-magnifying-glass {
+            font-weight: 400;
+            font-size: 14px;
+            margin: 0 12px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+    }
+
+    .StatusBar {
+        margin-top: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .Body {
+        padding: 30px 20px;
+        .search {
+            justify-content: unset;
+            flex-direction: column;
+        }
+    }
+}

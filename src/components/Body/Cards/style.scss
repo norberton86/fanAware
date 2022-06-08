@@ -1,0 +1,61 @@
+@import '../../../index.scss';
+
+.Cards {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+
+    .info {
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    form {
+        select {
+            border: none;
+            background: transparent;
+            color: white;
+        }
+    }
+
+    .avg {
+        font-size: 20px;
+        color: $active-color;
+        &:first-of-type  {
+            margin-right: 5px;
+        }
+    }
+
+    .row {
+        margin-top: 16px;
+        .col-xs-12, .col-sm-6, .col-md-6, .col-lg-4 {
+            margin-bottom: 40px;
+        }
+
+        .col-lg-4 {
+            .thirdCardInRow {
+                display: flex;
+                justify-content: end;
+            }
+
+            .secondCardInRow {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Cards {
+        .info {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 1em !important;
+        }
+
+        .AVG {
+            margin: 10px 0;
+        }
+    }
+}

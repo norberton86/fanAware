@@ -1,0 +1,72 @@
+@import '../../../../index.scss';
+
+@mixin after($background-value) {
+    position: absolute;
+    content: attr(data-label);
+    top: 11px;
+    right: -33px;
+    padding: 0.5rem;
+    width: 10rem;
+    background: $background-value;
+    color: white;
+    box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+    font-size: 15px;
+    font-weight: 400;
+}
+   
+
+.Card {
+    position: relative;
+    background: $header-color;
+    width: 384px;
+    height: 132px;
+    padding: 22px 0 25px 29px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .alias {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .id, .date {
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .id {
+        margin: 5px 0 2px 0;
+    }
+
+    &::before{
+        position: absolute;
+        top:2rem;
+        right:-28px;
+        content: '';
+        background: #3C3333;
+        height: 28px;
+        width: 28px;
+        transform : rotate(45deg);
+    }
+
+    &.running {
+        &::after{
+            @include after($active-color);
+        }
+    }
+
+    &.stopped {
+        &::after{
+            @include after(#888888);
+        }
+    }
+
+    &.malfunction {
+        &::after{
+            @include after($mainfunction-color);
+        }
+    }
+}
+

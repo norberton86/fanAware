@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.Header {
+    height: $header-height;
+    background-color: $header-color;
+    padding: 0 $padding-width-general;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    .logo {
+        width: 33.99px;
+        height: 30.35px;
+        margin-right: 8px;
+    }
+
+    .logoTitle {
+        font-weight: 400;
+        font-size: 27px;
+    }
+
+    .fa-gear {
+        margin: 0 29px;
+    }
+
+    .fa-bell {
+        margin-right: 50px;
+    }
+
+    .user {
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        margin-right: 7px;
+    }
+
+    .firstName {
+        font-weight: 400;
+        font-size: 17px;
+    }
+
+    .lastName {
+        font-weight: 400;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Header {
+        padding: 0 20px;
+    }
+}

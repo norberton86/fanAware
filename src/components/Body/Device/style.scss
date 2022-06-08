@@ -1,0 +1,88 @@
+@import '../../../index.scss';
+
+@mixin background($background-value) {
+    background: $background-value;
+}
+
+.Device {
+   height: 100%;
+   background: white;
+   padding: 49px 46px 38px 33px;
+   width: 390px;
+
+   .alias-container {
+    color: black;
+    margin-bottom: 5px;
+    .alias {
+        font-weight: 500;
+        font-size: 20px;
+    }
+ 
+    .fa-gear {
+     font-weight: 300;
+     font-size: 19.759px;
+    }
+   } 
+
+   .status {
+    width: 112.96px;
+    height: 33.51px;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 5px 10px;
+
+
+        &.running {
+            @include background($active-color);
+        }
+
+        &.stopped {
+            @include background(#888888);
+        }
+
+        &.malfunction {
+            @include background($mainfunction-color);
+        }
+   }
+
+   h6 {
+    font-weight: 400;
+    font-size: 13px;
+    margin-bottom: 2px;
+   }
+
+   .coreInfo {
+    margin-top: 10px;
+   }
+
+   .operatingParams {
+       margin-top: 25px;
+       h5 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 0px;
+       }
+       h4 {
+        font-weight: 400;
+        font-size: 45px;
+       }
+   }
+
+   .divider {
+       background-color: #C4C4C4;
+       height: 1px;
+       margin: 20px 0;
+   }
+
+   button {
+       border: none;
+       background: transparent;
+       outline: none;
+       color: $mainfunction-color;
+       font-weight: 700;
+       font-size: 13px;
+       align-self: flex-start;
+   }
+
+}

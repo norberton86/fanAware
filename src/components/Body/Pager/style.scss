@@ -1,0 +1,60 @@
+@import '../../../index.scss';
+
+.Pager {
+    color: white;
+    padding-bottom: 36px;
+    justify-content: end;
+    .svg-inline--fa {
+        height: 24px;
+        width: 24px;
+    }
+
+    .fa-circle-chevron-left {
+        margin-right: 14px;
+    }
+    .fa-circle-chevron-right {
+        margin-left: 14px;
+    }
+
+    .page {
+        margin-right: 14px;
+        cursor: pointer;
+        &:last-of-type {
+            margin-right: initial;
+        }
+
+        &.isActive {
+            background-color: #50847B;
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+            text-align: center;
+        }
+    }
+
+    form {
+        margin-left: 42px;
+        label {
+            margin-right: 8px;
+        }
+        select {
+            background: transparent;
+            color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Pager  {
+      justify-content: center;
+      .page {
+        &.isActive {
+            background-color: unset;
+            color: $active-color;
+            font-weight: bold;
+            border-bottom: 2px solid $active-color;   
+            border-radius: unset; 
+        }
+      }
+    }
+  }
